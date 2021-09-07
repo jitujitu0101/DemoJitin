@@ -19,7 +19,7 @@ pipeline {
 		
 		stage('Testing') { 
             steps {
-                sh 'mvn test' 
+                bat 'mvn test' 
             }
             post {
                 always {
