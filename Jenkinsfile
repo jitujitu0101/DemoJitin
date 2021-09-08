@@ -24,7 +24,7 @@ pipeline {
 		
 		stage('End to CI') {
             steps {
-                echo 'This comes to an end of CI pipeline'
+                echo 'This comes to an end of CI pipeline' 
             }
         }
     }
