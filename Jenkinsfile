@@ -5,7 +5,7 @@ pipeline {
 	}
 	
 	stages {
-        stage('Test Stage 1') {
+        stage('Test Maven version') {
             steps {
                bat 'mvn --version'
             }
