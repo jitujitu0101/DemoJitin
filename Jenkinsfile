@@ -5,12 +5,7 @@ pipeline {
 	}
 	
 	stages {
-        stage('Test Maven version') {
-            steps {
-               bat 'mvn --version'
-            }
-        }
-    
+        
         stage('Build') {
             steps {
                bat 'mvn -B -DskipTests clean package'
