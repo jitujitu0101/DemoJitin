@@ -1,5 +1,8 @@
 pipeline {
     agent {label 'SlaveNode1'}
+	triggers {
+		pollSCM('')
+	}
 	tools {
 		maven '3.8.2'
 	}
