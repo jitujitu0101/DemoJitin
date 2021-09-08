@@ -3,14 +3,7 @@ pipeline {
 	tools {
 		maven '3.8.2'
 	}
-	
-	stages {
-        stage('Test Stage 1') {
-            steps {
-               bat 'mvn --version'
-            }
-        }
-    
+   
         stage('Build') {
             steps {
                bat 'mvn -B -DskipTests clean package'
@@ -25,6 +18,13 @@ pipeline {
                 always {
                     junit 'target/surefire-reports/*.xml' 
                 }
+			
+            }
+        }
+		
+		stage('End to CI') {
+            steps {
+                echo 'This comes to an end of CI pipeline'
             }
         }
     }
