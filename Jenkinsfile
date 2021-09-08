@@ -27,5 +27,5 @@ pipeline {
                 echo 'This comes to an end of CI pipeline..' 
             }
         }
-    }
+    
 }
